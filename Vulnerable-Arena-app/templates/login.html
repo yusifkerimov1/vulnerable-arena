@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - Vulnerable Arena</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Courier New', monospace;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-box {
+            background-color: #1f1f1f;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px #00ffcc55;
+            width: 350px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #00ffcc;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 90%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: white;
+        }
+
+        input[type="submit"] {
+            padding: 12px 20px;
+            background-color: #00ffcc;
+            border: none;
+            color: black;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #00c2a8;
+        }
+
+        .link {
+            margin-top: 15px;
+            display: block;
+            color: #aaa;
+            text-decoration: none;
+        }
+
+        .link:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h2>🛡️ Login </h2>
+       <form method="POST">
+    <input type="hidden" name="next" value="{{ next }}">
+    <input type="text" name="username" placeholder="Username" required><br>
+    <input type="password" name="password" placeholder="Password" required><br>
+    <input type="submit" value="Login">
+</form>
+        <a class="link" href="/register">Don't have an account? Register here</a>
+    </div>
+</body>
+</html>
